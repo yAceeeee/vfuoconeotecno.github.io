@@ -1,0 +1,484 @@
+body { 
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 22px; 
+    margin: 0;
+    display: block;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url('Sfondo/Sfondo.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover; 
+    overflow-y: scroll;
+    background-position: center center;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.main-nav-desktop a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    transition: width 0.4s ease-out;
+}
+
+/* PASSARCI SOPRA MENU */
+.main-nav-desktop a:hover::after, 
+.main-nav-desktop a:focus::after {
+    width: 100%;
+}
+
+.theme-light .main-nav-desktop a:hover, 
+.theme-light .main-nav-desktop a:focus, 
+.theme-dark .main-nav-desktop a:hover, 
+.theme-dark .main-nav-desktop a:focus {
+    color: #af3745;
+}
+
+.theme-light .main-nav-desktop a:hover::after, 
+.theme-light .main-nav-desktop a:focus::after,
+.theme-dark .main-nav-desktop a:hover::after, 
+.theme-dark .main-nav-desktop a:focus::after {
+    background-color: #af3745;
+}
+
+.theme-christmas .main-nav-desktop a:hover, 
+.theme-christmas .main-nav-desktop a:focus {
+    color: #410000;
+}
+
+.theme-christmas .main-nav-desktop a:hover::after, 
+.theme-christmas .main-nav-desktop a:focus::after {
+    background-color: #410000;
+}
+/* PASSARCI SOPRA MENU */
+
+/* PAGINA ATTUALE */
+.theme-light .main-nav-desktop ul li a[href="../Gerarchia/Gerarchia.html"],
+.theme-dark .main-nav-desktop ul li a[href="../Gerarchia/Gerarchia.html"] {
+    color: #af3745;
+    font-weight: bold;
+}
+
+.theme-christmas .main-nav-desktop ul li a[href="../Gerarchia/Gerarchia.html"] {
+    color: #410000;
+    font-weight: bold;
+}
+
+.theme-light .main-nav-desktop ul li a[href="../Gerarchia/Gerarchia.html"]::after, 
+.theme-dark .main-nav-desktop ul li a[href="../Gerarchia/Gerarchia.html"]::after {
+    width: 100%;
+    background-color: #af3745;
+    font-weight: bold;
+}
+
+.theme-christmas .main-nav-desktop ul li a[href="../Gerarchia/Gerarchia.html"]::after {
+    width: 100%;
+    background-color: #410000;
+}
+/* PAGINA ATTUALE */
+
+.main-nav-desktop a img {
+    height: 1.3rem; 
+    width: auto;
+    margin-right: 5px; 
+}
+
+.theme-dark .main-nav-desktop a img,
+.theme-christmas .main-nav-desktop a img {
+    height: 1.3rem; 
+    width: auto;
+    margin-right: 5px; 
+    filter: invert(1);
+}
+
+/* CASA */
+.theme-light .main-nav-desktop a:hover img,
+.theme-light .main-nav-desktop a:focus img {
+    filter: invert(20%) sepia(80%) saturate(1400%) hue-rotate(330deg) brightness(90%);
+}
+
+
+.theme-dark .main-nav-desktop a:hover img,
+.theme-dark .main-nav-desktop a:focus img {
+    filter: invert(20%) sepia(80%) saturate(1400%) hue-rotate(330deg) brightness(90%);
+}
+
+
+.theme-christmas .main-nav-desktop a:hover img,
+.theme-christmas .main-nav-desktop a:focus img 
+{
+    filter: invert(15%) sepia(50%) saturate(1500%) hue-rotate(330deg) brightness(80%);
+}
+/* CASA */
+
+.Organigramma {
+    margin: 20px auto; 
+    position: relative; 
+    width: 100%;
+    max-width: 800px;
+    height: auto; 
+    padding-bottom: 0; 
+    overflow: visible; 
+}
+
+.organigramma-sfondo {
+    position: static;   
+    top: auto;
+    left: auto;
+    width: 100%; 
+    height: auto;
+}
+
+.distintivo {
+    position: absolute; 
+    width: 13%;
+    height: auto;
+    z-index: 10;
+}
+
+.DirigenteGenerale {
+    left: 43%;
+    top: 1%;
+}
+
+.DirigenteSuperiore {
+    left: -24%; 
+    top: 2%;
+}
+
+.PrimoDirigente {
+    left: 107%;
+    top: 2%;
+}
+
+.ViceDirigente {
+    left: -21%; 
+    top: 6%;
+}
+
+.ViceDirigenteAggiunto {
+    left: 113%;
+    top: 6%;
+}
+
+.IspettoreCoordinatore {
+    left: 110%;
+    top: 10%;
+}
+
+.IspettoreEsperto1 {
+    left: 109%;
+    top: 14.2%;
+}
+
+.IspettoreEsperto2 {
+    left: -22%;
+    top: 11.1%;
+}
+
+.Ispettore {
+    left: -16%;
+    top: 15.4%;
+}
+
+.CapoRepartoEsperto {
+    left: -27%;
+    top: 18.8%;
+}
+
+.CapoReparto {
+    left: 106%;
+    top: 18.8%;
+}
+
+.CapoSquadraEsperto1 {
+    left: 72%;
+    top: 32.8%;
+}
+
+.CapoSquadraEsperto2 {
+    left: 15%;
+    top: 32.8%;
+}
+
+.CapoSquadra1 {
+    left: 72%;
+    top: 41.7%;   
+}
+
+.CapoSquadra2 {
+    left: 15%;
+    top: 41.7%;  
+}
+
+.Coordinatore {
+    left: 72%;
+    top: 50.6%; 
+}
+
+.Esperto1 {
+    left: 15%;
+    top: 50.6%; 
+}
+
+.Esperto2 {
+    left: 72%;
+    top: 59.5%;   
+}
+
+.Esperto3 {
+    left: 15%;
+    top: 59.5%;   
+}
+
+.Esperto4 {
+    left: 15%;
+    top: 68.4%; 
+}
+
+.Esperto5 {
+    left: 72%;
+    top: 68.4%; 
+}
+
+.Esperto6 {
+    left: 15%;
+    top: 77.3%; 
+}
+
+.Vigile1 {
+    left: 72%;
+    top: 77.3%; 
+}
+
+.Vigile2 {
+    left: 15%;
+    top: 86.2%;
+}
+
+.Vigile3 {
+    left: 72%;
+    top: 86.2%;
+}
+
+.Vigile4 {
+    left: 15%;
+    top: 95.2%;
+}
+
+.Vigile5 {
+    left: 72%;
+    top: 95.2%;
+}
+
+
+.posizione-assoluta {
+    position: absolute;
+    z-index: 10;
+    text-align: center;
+    user-select: none;
+}
+
+.Gerarchie {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #af3745; 
+    text-align: center;
+}
+
+.Ruolo {
+    font-size: 1.2em;
+    color: #af3745;
+    font-style: italic;
+}
+
+.gerarchia-dirigenza {
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10px;
+}
+
+.gerarchia-ispettorato {
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 990px;
+}  
+
+.gerarchia-capi-reparto {
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 1560px;
+}   
+
+.gerarchia-operatori {
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 2150px;
+}  
+
+.ruolo-dirigente-generale {
+    top: 3.6%; 
+    left: 34%; 
+}
+
+.ruolo-dirigente-superiore {
+    top: 4.6%; 
+    left: -34%;
+}
+
+.ruolo-primo-dirigente {
+    top: 4.6%; 
+    width: auto; 
+    white-space: nowrap; 
+    left: 128%; 
+    transform: translateX(-100%); 
+}
+
+.ruolo-vice-dirigente {
+    top: 5.72%; 
+    left: -25%;
+}
+
+.ruolo-vice-dirigente-aggiunto {
+    top: 5.72%; 
+    width: auto; 
+    white-space: nowrap; 
+    left: 141%; 
+    transform: translateX(-100%); 
+}
+
+.ruolo-ispettore-coordinatore {
+    top: 12.62%; 
+    width: auto; 
+    white-space: nowrap; 
+    left: 138%; 
+    transform: translateX(-100%); 
+}
+
+.ruolo-ispettore-esperto1 {
+    top: 13.8%; 
+    width: auto; 
+    white-space: nowrap; 
+    left: 130%; 
+    transform: translateX(-100%); 
+}
+
+.ruolo-ispettore-esperto2 {
+    top: 13.8%; 
+    left: -30%;
+}
+
+.ruolo-ispettore {
+    top: 14.92%; 
+    left: -17%;
+}
+
+.ruolo-capo-reparto-esperto {
+    top: 21.42%;    
+    left: -38%;
+}
+
+.ruolo-capo-reparto {
+    top: 21.42%; 
+    width: auto; 
+    white-space: nowrap; 
+    left: 124%; 
+    transform: translateX(-100%); 
+}
+
+.ruolo-capo-squadra-esperto1 {
+    top: 32.42%;    
+    left: 3%;
+}
+
+.ruolo-capo-squadra-esperto2 {
+    top: 32.42%;     
+    left: 60%;
+}
+
+.ruolo-capo-squadra1 {
+    top: 41.3%;    
+    left: 9%;
+}
+
+.ruolo-capo-squadra2 {
+    top: 41.3%;     
+    left: 66%;
+}
+
+.ruolo-coordinatore {
+    top: 50.2%;    
+    left: -2%;
+}
+
+.ruolo-esperto1 {
+    top: 50.2%;  
+    left: 59%;
+}
+
+.ruolo-esperto2 {
+    top: 59.1%;    
+    left: 2%;
+}
+
+.ruolo-esperto3 {
+    top: 59.1%;   
+    left: 59%;
+}
+
+.ruolo-esperto4 {
+    top: 68%;    
+    left: 2%;
+}
+
+.ruolo-esperto5 {
+    top: 68%;    
+    left: 59%;
+}
+
+.ruolo-esperto6 {
+    top: 76.9%;        
+    left: 2%;
+}
+
+.ruolo-vigile1 {
+    top: 76.9%;  
+    left: 65%;
+}
+
+.ruolo-vigile2 {
+    top: 85.8%;  
+    left: 8%;
+}
+
+.ruolo-vigile3 {
+    top: 85.8%;   
+    left: 65%;
+}
+
+.ruolo-vigile4 {
+    top: 94.8%;    
+    left: 8%;
+}
+
+.ruolo-vigile5 {
+    top: 94.8%;   
+    left: 65%;
+}
+
+img[src*="Niente.png"] {
+    pointer-events: none;
+    cursor: default;
+}

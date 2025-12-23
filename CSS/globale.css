@@ -1,0 +1,414 @@
+body {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+}
+
+body:not(.page-loaded) .site-wrapper {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* HEADER */
+.theme-light .main-header {
+    background-color: rgba(231, 231, 231);
+    position: sticky; 
+    top: 0;
+    z-index: 50; 
+    padding: 5px 0; 
+    transition: background-color 0.4s ease-out;
+}
+
+.theme-dark .main-header {
+    background-color: rgba(10, 10, 10);
+    position: sticky; 
+    top: 0;
+    z-index: 50; 
+    padding: 5px 0; 
+    transition: background-color 0.4s ease-out;
+}
+
+.theme-christmas .main-header {
+    background-color: rgba(150, 62, 73);
+    position: sticky; 
+    top: 0;
+    z-index: 50; 
+    padding: 5px 0; 
+    transition: background-color 0.4s ease-out;
+}
+/* HEADER */
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+}
+
+/* TITOLO */
+.theme-light .header-title,
+.theme-dark .header-title {
+    flex-grow: 1; 
+    text-align: center; 
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #af3745; 
+}
+
+.theme-christmas .header-title {
+    flex-grow: 1; 
+    text-align: center; 
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #f1f1f1; 
+}
+/* TITOLO */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.logo img {
+    height: 10rem; 
+    width: auto;
+}
+
+.header-right-controls {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+    gap: 10px;
+}
+
+.theme-switcher {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.theme-switcher button {
+    width: 45px; 
+    height: 45px; 
+    background-color: transparent;
+    border: none;
+    padding: 0; 
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.theme-switcher button img {
+    transition: opacity 0.3s ease;
+}
+
+body:not(.page-loaded) .theme-switcher button img,
+body.page-leaving .theme-switcher button img {
+    opacity: 0 !important;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* SOLE LUNA ALBERO */
+.theme-dark .theme-switcher button img,
+.theme-christmas .theme-switcher button img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 10px;
+    filter: invert(1); 
+    transition: filter 0.1s;
+}
+
+.theme-light .theme-switcher button img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 10px;
+    transition: filter 0.1s;
+}
+/* SOLE LUNA ALBERO */
+
+/* HOVER SOLE LUNA ALBERO */
+.theme-light #theme-light:hover img,
+.theme-dark #theme-light:hover img,
+.theme-light #theme-dark:hover img,
+.theme-dark #theme-dark:hover img,
+.theme-light #theme-christmas:hover img,
+.theme-dark #theme-christmas:hover img
+{
+    filter: invert(20%) sepia(80%) saturate(1400%) hue-rotate(330deg) brightness(90%);
+}
+
+.theme-christmas #theme-light:hover img,
+.theme-christmas #theme-dark:hover img,
+.theme-christmas #theme-christmas:hover img {
+    filter: invert(15%) sepia(50%) saturate(1500%) hue-rotate(330deg) brightness(80%);
+}
+/* HOVER SOLE LUNA ALBERO */
+
+.theme-switcher button:hover {
+    transform: scale(1.15); 
+    border-color: transparent;
+    transition: transform 1s cubic-bezier(0.17, 0.84, 0.44, 1);
+}
+
+.header-bottom {
+    display: block; 
+    text-align: center;
+    padding-top: 5px; 
+}
+
+.main-nav-desktop ul {
+    list-style: none; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.main-nav-desktop li {
+    margin: 0 10px;
+}
+
+/* MENU */
+.theme-light .main-nav-desktop a {
+    text-decoration: none;
+    color: #131313;
+    font-size: 1rem;
+    padding: 10px 10px;
+    display: inline-flex; 
+    align-items: center; 
+    position: relative;
+    transition: color 0.3s;
+    font-weight: bold;
+}
+
+.theme-dark .main-nav-desktop a,
+.theme-christmas .main-nav-desktop a {
+    text-decoration: none;
+    color: #f1f1f1;
+    font-size: 1rem;
+    padding: 10px 10px;
+    display: inline-flex; 
+    align-items: center; 
+    position: relative;
+    transition: color 0.3s;
+}
+/* MENU */
+
+/* FOOTER */
+.theme-light .main-footer {
+    position: sticky; 
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: rgba(231, 231, 231);
+    color: #131313;
+    padding: 20px 0;
+    font-size: 0.9rem;
+    transition: background-color 0.4s ease-out;
+}
+
+.theme-dark .main-footer {
+    position: sticky; 
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: rgba(10, 10, 10);
+    color: #f1f1f1;
+    padding: 20px 0;
+    font-size: 0.9rem;
+    transition: background-color 0.4s ease-out;
+}
+
+.theme-christmas .main-footer {
+    position: sticky; 
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: rgba(150, 62, 73);
+    color: #f1f1f1;
+    padding: 20px 0;
+    font-size: 0.9rem;
+    transition: background-color 0.4s ease-out;
+}
+/* FOOTER */
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+}
+
+/* LINK FOOTER */
+.theme-light .footer-links a {
+    color: #131313;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: color 0.3s;
+}
+
+.theme-dark .footer-links a,
+.theme-christmas .footer-links a {
+    color: #f1f1f1;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: color 0.3s;
+}
+
+.theme-light .footer-links a:hover {
+    color: #af3745;
+}
+
+.theme-dark .footer-links a:hover {
+    color: #af3745;
+}
+
+.theme-christmas .footer-links a:hover {
+    color: #410000;
+}
+/* LINK FOOTER */
+
+.snowflake {
+    display: none;
+    position: fixed;
+    color: #fff;
+    font-size: 1em;
+    opacity: 0.8;
+    text-shadow: 0 0 1px #fff;
+    animation: fall linear infinite;
+    pointer-events: none;
+    z-index: 9999;
+    will-change: transform;
+}
+
+body.theme-christmas .snowflake {
+    display: block;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100vh);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+/* TRANSIZIONE */
+.theme-light #transition-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f1f1f1;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    pointer-events: none;
+}
+
+.theme-dark #transition-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    pointer-events: none;
+}
+
+.theme-christmas #transition-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #963e49;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    pointer-events: none;
+}
+/* TRANSIZIONE */
+
+.page-loaded #transition-layer {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader {
+    display: flex;
+    gap: 8px;
+}
+
+/* PUNTINI */
+.theme-light .loader span {
+    width: 15px;
+    height: 15px;
+    background-color: #000000;
+    border-radius: 50%;
+    display: inline-block;
+    animation: bounce 1s infinite ease-in-out both;
+}
+
+.theme-dark .loader span,
+.theme-christmas .loader span {
+    width: 15px;
+    height: 15px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: inline-block;
+    animation: bounce 1s infinite ease-in-out both;
+}
+/* PUNTINI */
+
+.loader span:nth-child(1) { animation-delay: -0.32s; }
+.loader span:nth-child(2) { animation-delay: -0.16s; }
+
+@keyframes bounce {
+    0%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-20px); }
+}

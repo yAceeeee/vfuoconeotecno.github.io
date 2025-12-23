@@ -1,0 +1,359 @@
+body { 
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 22px; 
+    margin: 0;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    height: 100vh; 
+    background-image: url('../Gerarchia/Sfondo/SfondoPersonale.png');
+    background-repeat: repeat; 
+    background-size: 30px 30px; 
+    background-attachment: scroll; 
+    background-position: center center;
+    overflow-y: hidden;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.main-nav-desktop a {
+    position: relative;
+    display: block;
+    text-decoration: none;
+}
+
+.main-nav-desktop a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    transition: width 0.4s ease-out;
+}
+
+/* PASSARCI SOPRA MENU */
+.main-nav-desktop a:hover::after, 
+.main-nav-desktop a:focus::after {
+    width: 100%;
+}
+
+.theme-light .main-nav-desktop a:hover, 
+.theme-light .main-nav-desktop a:focus, 
+.theme-dark .main-nav-desktop a:hover, 
+.theme-dark .main-nav-desktop a:focus {
+    color: #af3745;
+}
+
+.theme-light .main-nav-desktop a:hover::after, 
+.theme-light .main-nav-desktop a:focus::after,
+.theme-dark .main-nav-desktop a:hover::after, 
+.theme-dark .main-nav-desktop a:focus::after {
+    background-color: #af3745;
+}
+
+.theme-christmas .main-nav-desktop a:hover, 
+.theme-christmas .main-nav-desktop a:focus {
+    color: #410000;
+}
+
+.theme-christmas .main-nav-desktop a:hover::after, 
+.theme-christmas .main-nav-desktop a:focus::after {
+    background-color: #410000;
+}
+/* PASSARCI SOPRA MENU */
+
+/* PAGINA ATTUALE */
+.theme-light .main-nav-desktop ul li a[href="../../../Gerarchia/Gerarchia.html"],
+.theme-dark .main-nav-desktop ul li a[href="../../../Gerarchia/Gerarchia.html"] {
+    color: #af3745;
+    font-weight: bold;
+}
+
+.theme-christmas .main-nav-desktop ul li a[href="../../../Gerarchia/Gerarchia.html"] {
+    color: #410000;
+    font-weight: bold;
+}
+
+.theme-light .main-nav-desktop ul li a[href="../../../Gerarchia/Gerarchia.html"]::after, 
+.theme-dark .main-nav-desktop ul li a[href="../../../Gerarchia/Gerarchia.html"]::after {
+    width: 100%;
+    background-color: #af3745;
+    font-weight: bold;
+}
+
+.theme-christmas .main-nav-desktop ul li a[href="../../../Gerarchia/Gerarchia.html"]::after {
+    width: 100%;
+    background-color: #410000;
+}
+/* PAGINA ATTUALE */
+
+.main-nav-desktop a img {
+    height: 1.3rem; 
+    width: auto;
+    margin-right: 5px; 
+}
+
+.theme-dark .main-nav-desktop a img,
+.theme-christmas .main-nav-desktop a img {
+    height: 1.3rem; 
+    width: auto;
+    margin-right: 5px; 
+    filter: invert(1);
+}
+
+/* CASA */
+.theme-light .main-nav-desktop a:hover img,
+.theme-light .main-nav-desktop a:focus img {
+    filter: invert(20%) sepia(80%) saturate(1400%) hue-rotate(330deg) brightness(90%);
+}
+
+
+.theme-dark .main-nav-desktop a:hover img,
+.theme-dark .main-nav-desktop a:focus img {
+    filter: invert(20%) sepia(80%) saturate(1400%) hue-rotate(330deg) brightness(90%);
+}
+
+
+.theme-christmas .main-nav-desktop a:hover img,
+.theme-christmas .main-nav-desktop a:focus img 
+{
+    filter: invert(15%) sepia(50%) saturate(1500%) hue-rotate(330deg) brightness(80%);
+}
+/* CASA */
+
+.contenitore-principale {
+    display: flex;
+    width: 100%;
+    align-items: center; 
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box; 
+    min-width: 700px; 
+    height: 100%;;
+}
+
+.Personaggio {
+    order: 1; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+    padding: 15px;
+    flex: 1 1 15%; 
+    min-width: 100px;
+}
+
+.Ruolo {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.nome {
+    font-size: 1em;
+    font-weight: bolder;
+    margin-bottom: 10px;
+    color: #f1f1f1;
+}
+
+.ruoliextra {
+    display: block;
+    flex-direction: column;
+    flex-shrink: 0;
+    padding-right: 10px;
+    font-size: 1rem; 
+    color: #c2c2c2;
+}
+
+.Skin {
+    width: 35%;
+    flex-grow: 1; 
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.skin-png-display {
+    margin-top: 20px;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; 
+    display: block; 
+}
+
+.theme-light .Descrizione {
+    order: 2; 
+    padding: 15px;
+    flex: 5 1 50%; 
+    max-width: 600px;
+    margin-left: 0;
+    overflow-y: auto; 
+    max-height: 65vh; 
+    border-radius: 20px;
+    background-color: rgba(241, 241, 241, 0.5);
+    transition: all 0.3s;
+    direction: rtl;
+}
+
+.theme-dark .Descrizione {
+    order: 2; 
+    padding: 15px;
+    flex: 5 1 50%; 
+    max-width: 600px;
+    margin-left: 0; 
+    overflow-y: auto;
+    height: auto;
+    max-height: 65vh; 
+    color: white;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all 0.3s;
+    direction: rtl;
+}
+
+.theme-christmas .Descrizione {
+    order: 2; 
+    padding: 15px;
+    flex: 5 1 50%; 
+    max-width: 600px;
+    margin-left: 0; 
+    color: white;
+    overflow-y: auto;
+    max-height: 65vh; 
+    border-radius: 20px;
+    background-color: rgba(143, 60, 60, 0.5);
+    transition: all 0.3s;
+    direction: rtl;
+}
+
+.Descrizione p {
+    margin: 0;
+    line-height: 1.6;
+    font-size: 0.9em;
+    max-height: 65vh; 
+    text-align: justify;
+    font-style: italic;
+    direction: ltr;
+}
+
+.Descrizione::-webkit-scrollbar {
+    width: 8px; 
+}
+
+.theme-light .Descrizione::-webkit-scrollbar-track {
+    background: rgba(241, 241, 241, 0.7); 
+    border-radius: 10px;
+}
+
+.theme-light .Descrizione::-webkit-scrollbar-thumb {
+    background-color: #A0A0A0; 
+    border-radius: 10px;
+    border: 1px solid #c0c0c0;
+}
+
+.theme-light .Descrizione::-webkit-scrollbar-thumb:hover {
+    background-color: #606060; 
+}
+
+.theme-dark .Descrizione::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.7); 
+    border-radius: 10px;
+}
+
+.theme-dark .Descrizione::-webkit-scrollbar-thumb {
+    background-color: #606060; 
+    border-radius: 10px;
+    border: 1px solid #333; 
+}
+
+.theme-dark .Descrizione::-webkit-scrollbar-thumb:hover {
+    background-color: #888888; 
+}
+
+.theme-christmas .Descrizione::-webkit-scrollbar-track {
+    background: rgba(143, 60, 60, 0.7); /* Traccia rossa */
+    border-radius: 10px;
+}
+
+.theme-christmas .Descrizione::-webkit-scrollbar-thumb {
+    background-color: #f1f1f1; 
+    border-radius: 10px;
+    border: 1px solid #ffffff; 
+}
+
+.theme-christmas .Descrizione::-webkit-scrollbar-thumb:hover {
+    background-color: #cccccc;
+}
+
+.Titoli-di-Studio {
+    order: 3; 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+    flex: 1 1 25%; 
+    min-width: 180px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.blocco-titoli {
+    padding: 0;
+    font-size: 0.9em;
+    text-align: center;
+    color: #f1f1f1;
+    font-weight: bold;
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    overflow-x: hidden;
+    transition: all 0.3s;
+}
+
+.blocco-titoli:hover {
+    transform: scale(1.1);
+    transition: all 0.3s;
+}
+
+.titolo-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.titolo-icona {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    margin-right: 8px;
+}
+
+.titolo-contenuto {
+    width: 100%;
+    height: auto; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.titolo-contenuto.nascosto {
+    display: none;
+}
+
+.contenuto-immagine {
+    max-width: 35%;
+    height: auto; 
+    object-fit: contain;
+    border-radius: 10px;
+}
