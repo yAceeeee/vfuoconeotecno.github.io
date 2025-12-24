@@ -10,7 +10,7 @@ body {
 
 /* SFONDO */
 .theme-light .content {
-    background-image: url('Sfondo/SfondoLight.png');
+    background-image: url('../Immagini/Sfondi/SfondoLightHome.png');
     background-position: top center; 
     background-size: cover; 
     background-attachment: scroll;
@@ -21,7 +21,7 @@ body {
 }
 
 .theme-dark .content {
-    background-image: url('Sfondo/SfondoDark.png');
+    background-image: url('../Immagini/Sfondi/SfondoDarkHome.png');
     background-position: top center; 
     background-size: cover; 
     background-attachment: scroll;
@@ -32,7 +32,7 @@ body {
 }
 
 .theme-christmas .content {
-    background-image: url('Sfondo/SfondoNatalizio.png');
+    background-image: url('../Immagini/Sfondi/SfondoNatalizioHome.png');
     background-position: top center; 
     background-size: cover; 
     background-attachment: scroll;

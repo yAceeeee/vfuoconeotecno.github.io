@@ -6,7 +6,7 @@ body {
     flex-direction: column;
     justify-content: center; 
     height: 100vh; 
-    background-image: url('../Gerarchia/Sfondo/SfondoPersonale.png');
+    background-image: url('../Immagini/Sfondi/Operatori.png');
     background-repeat: repeat; 
     background-size: 30px 30px; 
     background-attachment: scroll; 

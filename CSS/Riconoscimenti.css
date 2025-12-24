@@ -5,7 +5,7 @@ body {
     display: block;
     flex-direction: column;
     min-height: 210vh;
-    background-image: url('Sfondo/Sfondo.png');
+    background-image: url('../Immagini/Sfondi/Onorificenze.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover; 
