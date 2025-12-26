@@ -28,7 +28,8 @@ document.addEventListener('DOMContentLoaded', () => {
         { label: "Scuola", val: 4, col: "#880044" },
         { label: "Autoscuola", val: 8, col: "#880044" },
         { label: "Steakhouse", val: 3, col: "#3d1414" },
-        { label: "Abitazioni", val: 11, col: "#995500" }
+        { label: "Fattoria", val: 0.01, col: "#995500" },
+        { label: "Abitazioni", val: 11, col: "#dac618ff" }
     ];
 
     const chart = document.getElementById('bar-chart');
@@ -42,12 +43,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const fileName = item.label.replace(/\s+/g, '').replace("'", "");
         colLink.href = `${folder}/${fileName}.html`;
         
+        const integerValue = Math.floor(item.val);
+        
         colLink.innerHTML = `
             <div class="bar-fill" style="height:${h}%; background-color:${item.col}">
-                <span class="bar-num" style="color:${item.col}">${item.val}</span>
+                <span class="bar-num" style="color:${item.col}">${integerValue}</span>
             </div>
             <span class="bar-name" style="color:${item.col}">${item.label}</span>
         `;
+        
         chart.appendChild(colLink);
     });
 });
