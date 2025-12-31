@@ -551,12 +551,13 @@ body.theme-christmas .snowflake {
         gap: 5px;
     }
     
-    /* MOSTRA L'HAMBURGER */
-    .menu {
-        display: block; 
-        top: 100px; /* Abbassato come richiesto precedentemente */
-        right: 0px;
-    }
+.menu {
+    display: block; 
+    position: fixed; 
+    top: 12vh;
+    right: 0vw;
+    z-index: 1000;
+}
     
     .theme-switcher {
         gap: 15px;
@@ -567,7 +568,6 @@ body.theme-christmas .snowflake {
         height: 30px;
     }
     
-    /* NASCONDI IL MENU DI DEFAULT SU MOBILE */
     .header-bottom {
         display: block; 
         padding-top: 0;
@@ -583,11 +583,6 @@ body.theme-christmas .snowflake {
         transition: opacity 0.3s ease, visibility 0.3s ease;
         background-color: inherit; 
     }
-
-    /* =========================================================================
-     * ATTIVAZIONE MENU TRAMITE JAVASCRIPT
-     * Quando il JS aggiunge la classe .menu-open al body, il menu appare.
-     * ========================================================================= */
     
     body.menu-open .header-bottom {
         visibility: visible;
