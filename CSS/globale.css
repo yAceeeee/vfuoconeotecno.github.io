@@ -12,6 +12,10 @@ body:not(.page-loaded) .site-wrapper {
     pointer-events: none;
 }
 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 img {
     -webkit-user-drag: none;
     -khtml-user-drag: none;
@@ -541,8 +545,8 @@ body.theme-christmas .snowflake {
     .header-title {
         font-size: 0.8rem;
         order: 2;
-        /* Rimuoviamo il display: none; che avevi in fondo alla media query,
-           ora usiamo order: 2; come avevi impostato */
+        /* Correggiamo: Nascondi il titolo come da richiesta precedente */
+        display: none; 
     }
 
     .logo {
@@ -561,11 +565,13 @@ body.theme-christmas .snowflake {
     
     .menu {
         display: block; 
-        position: fixed; 
-        top: 12vh;
-        
-        /* MODIFICA: Avviciniamo il menu al bordo per evitare lo scroll orizzontale */
-        right: 10px; 
+        /* --- CORREZIONE DEL PROBLEMA DI OVERFLOW --- */
+        /* Rimosso position: fixed, top, e right per far tornare il menu nel flusso 
+           Flexbox di .header-right-controls, eliminando lo scroll indesiderato. */
+        position: initial; 
+        top: initial;     
+        right:initial; 
+        /* ------------------------------------------- */
         
         z-index: 1000;
     }
@@ -653,8 +659,4 @@ body.theme-christmas .snowflake {
         width: 10px;
         height: 10px;
     }
-    
-     .header-title {
-        display: none; 
-    } 
 }
