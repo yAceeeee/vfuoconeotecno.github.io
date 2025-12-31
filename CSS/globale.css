@@ -555,7 +555,7 @@ body.theme-christmas .snowflake {
     display: block; 
     position: fixed; 
     top: 12vh;
-    right: 0vw;
+    right: 10px;
     z-index: 1000;
 }
     
